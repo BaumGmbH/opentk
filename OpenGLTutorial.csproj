@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ShaderProgram\shaderStandard_Fragment.glsl" />
+    <None Remove="ShaderProgram\shaderStandard_vertex.glsl" />
+    <None Remove="Textures\stone.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ShaderProgram\shaderStandard_vertex.glsl" />
+    <EmbeddedResource Include="ShaderProgram\shaderStandard_fragment.glsl" />
+    <EmbeddedResource Include="Textures\stone.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenTK" Version="4.6.3" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+  </ItemGroup>
+
+</Project>
